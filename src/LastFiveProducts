@@ -1,0 +1,19 @@
+const LastFiveProducts = ({ productsProp }) => {
+    const lastFiveProducts = productsProp.slice(2, 7);
+
+    return (
+        <section>
+          <h2>Les 5 derniers produits :</h2>
+          {lastFiveProducts.map((products) => {
+            return (
+              <article>
+                <h3>{products.title}</h3>
+                <img src={products.img} />
+              </article>
+            );
+          })}
+        </section>
+        );
+    };
+
+export default LastFiveProducts;
